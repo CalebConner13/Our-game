@@ -1,1 +1,1 @@
-# This README is for information about the storyline of our game
+# This README is for general information about our game
