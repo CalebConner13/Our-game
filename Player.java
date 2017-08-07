@@ -20,7 +20,7 @@ public class Player {
 		playerName = name;
 	}
 	
-	void updateStats(String stat) { //Breaks if typos?
+	void updateStats(String stat) { //Breaks if typos? Need to add a way for the user to subtract points
 		switch(stat) {
 			case "str+":
 				str++;
