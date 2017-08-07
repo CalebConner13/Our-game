@@ -1,12 +1,13 @@
+//This is the main file for our story
+
 import java.util.Scanner;
 public class Story {
 	
 	public static void main(String[] args) {
 		
         Scanner scan = new Scanner(System.in);
-        System.out.println("Old Tom: Well hello! Welcome to the wonderful world of SOMEPLACE. You're here "
-        		+ "for a reason, so spill it."); //first character introduction
-        System.out.println("Enter name: ");
+        System.out.println("Old Tom: Well hello! Welcome to the wonderful world of SOMEPLACE. \nYou're new here... what's your name? "); //first character introduction
+        System.out.println("Enter your name: ");
         String name = scan.nextLine();
         Player player1 = new Player(); //created the player
         
@@ -15,12 +16,15 @@ public class Story {
         
         String stat;
         for( int i=10; i>0; i-- ) { //breaks when incorrect input is entered, i.e. typo
-        		System.out.println(i + " more points!"); 
-	        stat = scan.nextLine();
+        		if(i>1) { System.out.println(i + " more points! \n"); }
+        		else { System.out.println(i + " more point! \n"); }
+	        
+        		stat = scan.nextLine();
 	        player1.updateStats(stat); //updates the specified skill
         }
         System.out.println("str: " + player1.str + "\nper: " + player1.per + "\nend: " + player1.end 
         		+ "\nchg: " + player1.cha + "\nint: " + player1.intel + "\nagl: " + player1.agl + "\nlck: " + player1.lck);//print all of the skills 
+        System.out.println("Old Tom: Do you know why you're here, " + name + "?");
         
         scan.close();
         

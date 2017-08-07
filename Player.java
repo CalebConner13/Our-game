@@ -7,7 +7,7 @@ public class Player {
 	
 	Player() {
 		playerName = "";
-		str = 0; //sets base skill values
+		str = 0;
 		per = 0;
 		end = 0;
 		cha = 0;
@@ -20,7 +20,7 @@ public class Player {
 		playerName = name;
 	}
 	
-	void updateStats(String stat) { //breaks if invalid input
+	void updateStats(String stat) { //Breaks if typos?
 		switch(stat) {
 			case "str+":
 				str++;
