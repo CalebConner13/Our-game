@@ -1,3 +1,4 @@
+//This file includes important method data for story.java
 
 public class Player {
 
@@ -6,7 +7,7 @@ public class Player {
 	
 	Player() {
 		playerName = "";
-		str = 0;
+		str = 0; //sets base skill values
 		per = 0;
 		end = 0;
 		cha = 0;
@@ -19,7 +20,7 @@ public class Player {
 		playerName = name;
 	}
 	
-	void updateStats(String stat) { //Breaks if typos?
+	void updateStats(String stat) { //breaks if invalid input
 		switch(stat) {
 			case "str+":
 				str++;
