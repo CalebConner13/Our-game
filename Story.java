@@ -5,41 +5,40 @@ public class Story {
 	
 	public static void main(String[] args) {
 		
+		Player player1 = new Player(); //created the player
         Scanner scan = new Scanner(System.in);
         System.out.println("Old Tom: Well hello! Welcome to the wonderful world of SOMEPLACE. \nYou're new here... what's your name? "); //first character introduction
         System.out.println("Enter your name: ");
-        String name = scan.nextLine();
-        Player player1 = new Player(); //created the player
+        player1.playerName = scan.nextLine(); //set player name
         
         System.out.println("This is your initial skill composition: \nstr: 0\nper: 0\nend: 0\ncha: 0\nint: 0\n"
         		+ "agl: 0\nlck: 0\nyou have 10 points to spend");
         
+        //this works better than what I had but it breaks easier. it doesnt keep track of the amount of skill points which allows the player to enter any amount 
         System.out.println("Strength: ");
-        int str = scan.nextInt();
+        player1.str = scan.nextInt();
         System.out.println("\nPerception: ");
-        int per = scan.nextInt();
+        player1.per = scan.nextInt();
         System.out.println("\nEndurance: ");
-        int end = scan.nextInt();
+        player1.end = scan.nextInt();
         System.out.println("\nCharisma: ");
-        int cha = scan.nextInt();
+        player1.cha = scan.nextInt();
         System.out.println("\nIntelligence: ");
-        int intel = scan.nextInt();
+        player1.intel = scan.nextInt();
         System.out.println("\nAgility: ");
-        int agl = scan.nextInt();
+        player1.agl = scan.nextInt();
         System.out.println("\nLuck: ");
-        int lck = scan.nextInt();
+        player1.lck = scan.nextInt();
         
-        System.out.println("These are your skills: \nStrength: " + str);
-        System.out.println("Perception: " + per);
-        System.out.println("Endurance: " + end);
-        System.out.println("Charisma: " + cha);
-        System.out.println("Intelligence: " + intel);
-        System.out.println("Agility: " + agl);
-        System.out.println("Luck: " + lck);
+        System.out.println("\nThese are your skills: \nStrength: " + player1.str);
+        System.out.println("Perception: " + player1.per);
+        System.out.println("Endurance: " + player1.end);
+        System.out.println("Charisma: " + player1.cha);
+        System.out.println("Intelligence: " + player1.intel);
+        System.out.println("Agility: " + player1.agl);
+        System.out.println("Luck: " + player1.lck);
  
-        System.out.println("str: " + player1.str + "\nper: " + player1.per + "\nend: " + player1.end 
-        		+ "\nchg: " + player1.cha + "\nint: " + player1.intel + "\nagl: " + player1.agl + "\nlck: " + player1.lck);//print all of the skills 
-        System.out.println("Old Tom: Do you know why you're here, " + name + "?");
+        System.out.println("\nOld Tom: Do you know why you're here, " + player1.playerName + "?");
         
         scan.close();
         
