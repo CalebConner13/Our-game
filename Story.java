@@ -12,22 +12,36 @@ public class Story {
         Player player1 = new Player(); //created the player
         
         System.out.println("This is your initial skill composition: \nstr: 0\nper: 0\nend: 0\ncha: 0\nint: 0\n"
-        		+ "agl: 0\nlck: 0\nyou have 10 points to spend\ntype 'str+' or 'end+' to add a skill point to the skill you select");
+        		+ "agl: 0\nlck: 0\nyou have 10 points to spend");
         
-        String stat;
-        for( int i=10; i>0; i-- ) { //breaks when incorrect input is entered, i.e. typo
-        		if(i>1) { System.out.println(i + " more points!"); }
-        		else { System.out.println(i + " more point!"); }
-	        
-        		stat = scan.nextLine();
-	        player1.updateStats(stat); //updates the specified skill
-        }
+        System.out.println("Strength: ");
+        int str = scan.nextInt();
+        System.out.println("\nPerception: ");
+        int per = scan.nextInt();
+        System.out.println("\nEndurance: ");
+        int end = scan.nextInt();
+        System.out.println("\nCharisma: ");
+        int cha = scan.nextInt();
+        System.out.println("\nIntelligence: ");
+        int intel = scan.nextInt();
+        System.out.println("\nAgility: ");
+        int agl = scan.nextInt();
+        System.out.println("\nLuck: ");
+        int lck = scan.nextInt();
+        
+        System.out.println("These are your skills: \nStrength: " + str);
+        System.out.println("Perception: " + per);
+        System.out.println("Endurance: " + end);
+        System.out.println("Charisma: " + cha);
+        System.out.println("Intelligence: " + intel);
+        System.out.println("Agility: " + agl);
+        System.out.println("Luck: " + lck);
+ 
         System.out.println("str: " + player1.str + "\nper: " + player1.per + "\nend: " + player1.end 
         		+ "\nchg: " + player1.cha + "\nint: " + player1.intel + "\nagl: " + player1.agl + "\nlck: " + player1.lck);//print all of the skills 
         System.out.println("Old Tom: Do you know why you're here, " + name + "?");
         
         scan.close();
         
-	}
-  
+    }
 }
