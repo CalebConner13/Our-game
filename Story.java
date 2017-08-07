@@ -16,8 +16,8 @@ public class Story {
         
         String stat;
         for( int i=10; i>0; i-- ) { //breaks when incorrect input is entered, i.e. typo
-        		if(i>1) { System.out.println(i + " more points! \n"); }
-        		else { System.out.println(i + " more point! \n"); }
+        		if(i>1) { System.out.println(i + " more points!"); }
+        		else { System.out.println(i + " more point!"); }
 	        
         		stat = scan.nextLine();
 	        player1.updateStats(stat); //updates the specified skill
