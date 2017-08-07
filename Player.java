@@ -15,11 +15,11 @@ public class Player {
 		lck = 0;
 	}
 
-	void setName(String name){
+	void setName(String name){ 
 		playerName = name;
 	}
 	
-	void updateStats(String stat) {
+	void updateStats(String stat) { //Breaks if typos?
 		switch(stat) {
 			case "str+":
 				str++;
