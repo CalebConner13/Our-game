@@ -3,10 +3,12 @@
 public class Player {
 
 	String playerName;
-	int str, per, end, cha, intel, agl, lck;
+	int health, armor, str, per, end, cha, intel, agl, lck;
 	
 	Player() {
 		playerName = "";
+		health = 100;
+		armor = 0;
 		str = 0;
 		per = 0;
 		end = 0;
@@ -15,8 +17,5 @@ public class Player {
 		agl = 0;
 		lck = 0;
 	}
-
-	void setName(String name){ 
-		playerName = name;
-	}
+	
 }
