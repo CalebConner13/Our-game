@@ -3,10 +3,12 @@
 public class Player {
 
 	String playerName;
-	int str, per, end, cha, intel, agl, lck;
+	int health, armor, str, per, end, cha, intel, agl, lck;
 	
 	Player() {
 		playerName = "";
+		health = 100;
+		armor = 0;
 		str = 0;
 		per = 0;
 		end = 0;
@@ -15,40 +17,5 @@ public class Player {
 		agl = 0;
 		lck = 0;
 	}
-
-	void setName(String name){ 
-		playerName = name;
-	}
 	
-	void updateStats(String stat) { //Breaks if typos? Need to add a way for the user to subtract points
-		switch(stat) {
-			case "str+":
-				str++;
-				break;
-			case "per+":
-				per++;
-				break;
-			case "end+":
-				end++;
-				break;
-			case "cha+":
-				cha++;
-				break;
-			case "int+":
-				intel++;
-				break;
-			case "agl+":
-				agl++;
-				break;
-			case "lck+":
-				lck++;
-				break;
-			case "stop":
-				break;
-			default: 
-				System.out.println("Enter correct input!");
-		
-		}
-	}
-
 }
