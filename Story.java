@@ -7,6 +7,10 @@ public class Story {
 		
 		Player player1 = new Player(); //created the player
         Scanner scan = new Scanner(System.in);
+        
+        System.out.println("*Your eyes slowly open to find an old, crazy looking man staring straight at you. You look down and your hands are tied to the armrests of a wooden chair"
+        		+ ". You look to the right to see a shabby workbench with various torturous-looking tools on it. You look to the left and see a door. You notice the lack of windows in the room as well "
+        		+ "as the strong smell of gasoline");
         System.out.println("Old Tom: Well hello! Welcome to the wonderful world of SOMEPLACE. \nYou're new here... what's your name? "); //first character introduction
         System.out.println("Enter your name: ");
         player1.playerName = scan.nextLine(); //set player name
